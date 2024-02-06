@@ -2,7 +2,7 @@ def get_substrings (string, dictionary)
   
   substrings_count = Hash.new(0)
   dictionary.each do |word|
-    words = string.split(" ")
+    words = string.downcase.split(" ")
     words.each do |w|
       if w.include?(word)
         substrings_count[word] += 1
